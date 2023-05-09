@@ -1,0 +1,6 @@
+.venv
+.flaskenv
+__pycache__
+data.db
+Dockerfile
+.DS_Store
