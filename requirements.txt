@@ -8,3 +8,6 @@ gunicorn
 flask-migrate
 gunicorn
 psycopg2
+requests
+rq
+redis
