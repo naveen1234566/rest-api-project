@@ -42,6 +42,10 @@ def create_app(db_url=None):
     
     db.init_app(app)
     api = Api(app)
+    
+    @app.before_request
+    def create_tables():
+        db.create_all()
     # pip install flask-migrate
     # deleting database
     # in terminal=> flask db migrate
@@ -113,9 +117,7 @@ def create_app(db_url=None):
             }),401
         )
 
-    @app.before_request
-    def create_tables():
-        db.create_all()
+    
     # with app.app_context():
     #     db.create_all()
 
