@@ -52,5 +52,5 @@ class UserSchema(Schema):
     password = fields.Str(required=True)
 
 
-class UserRegisterSchema(UserSchema):
-    email = fields.Str(required=True)
+# class UserRegisterSchema(UserSchema):
+#     email = fields.Str(required=True)
