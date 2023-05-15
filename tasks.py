@@ -19,7 +19,7 @@ def send_simple_message(to, subject, body):
         f"https://api.mailgun.net/v3/{DOMAIN}/messages",
         auth=("api", os.getenv("MAILGUN_API_KEY")),
         data={
-            "from": f"naveen u<mailgun@{DOMAIN}>",
+            "from": f"ranjith<mailgun@{DOMAIN}>",
             "to": [to],
             "subject": subject,
             "text": body,
@@ -32,6 +32,20 @@ def send_user_registration_email(email, username):
     return send_simple_message(
         email,
         "Successfully signed up",
-        f"Hi {username}! You have successfully signed up to the Stores REST API."
-        # render_template("email/registration.html", username=username),
+        f"Hi {username}! You have successfully signed up to the Stores REST API.",
+        # render_template("email/action.html", username=username)
     )
+    
+# def send_simple_message():
+# 	return requests.post(
+# 		"https://api.mailgun.net/v3/sandboxf74c71929e9c4027901805b4d610fb8e.mailgun.org/messages",
+# 		auth=("api", "1105a63947a6e7d2b9dd7bd3686bc5ff-db4df449-d6a3d8c7"),
+# 		data={"from": "Mailgun Sandbox <postmaster@sandboxf74c71929e9c4027901805b4d610fb8e.mailgun.org>",
+# 			"to": "ranjith <ranjithusvn@gmail.com>",
+# 			"subject": "Hello ranjith",
+# 			"text": "Congratulations ranjith, you just sent an email with Mailgun!  You are truly awesome!"})
+
+# You can see a record of this email in your logs: https://app.mailgun.com/app/logs.
+
+# You can send up to 300 emails/day from this sandbox server.
+# Next, you should add your own domain so you can send 10000 emails/month for free.
