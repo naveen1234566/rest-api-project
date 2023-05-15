@@ -22,7 +22,7 @@ blp = Blueprint("Users", "users", description="Operations on users")
 #     return requests.post(
 # 		f"https://api.mailgun.net/v3/{domain}/messages",
 # 		auth=("api", os.getenv("MAILGUN_API_KEY")),
-# 		data={"from":f"Ranjith U<mailgun@{domain}>",
+# 		data={"from":f"naveen u<mailgun@{domain}>",
 # 			"to": [to],
 # 			"subject": subject,
 # 			"text": body})
