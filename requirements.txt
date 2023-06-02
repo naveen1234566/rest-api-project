@@ -8,6 +8,7 @@ gunicorn
 flask-migrate
 gunicorn
 psycopg2
+pymongo
 requests
 rq
 redis
